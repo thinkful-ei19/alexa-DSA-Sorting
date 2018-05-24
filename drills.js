@@ -146,7 +146,66 @@ function mergeSortCounterTotal() {
   console.log('this is mergeSortTotalCounter:', mergeSortTotalCounter);
 }
 
-mergeSortCounterTotal();
+// mergeSortCounterTotal();
 
 
 ///////////////////////////// BUCKET SORT /////////////////////////////
+
+// Create vars for i, min, max, and bucket size
+//   Find min and max value
+//   Create amount of buckets
+//   Push values to correct buckets 
+//   Sort bucket
+
+
+
+function bucketSort(arr, min, max) {
+  if (arr.length === 1) {
+    return arr;
+  }
+
+  let buckets = Math.floor(arr.length / 3);
+  console.log(`created ${buckets}`);
+  let bucketArr = new Array(buckets);
+  
+
+  for (let i = 0; i<bucketArr.length; i++) {
+    bucketArr[i] = [];
+  }
+
+  console.log('this is bucketArr', bucketArr);
+
+
+  
+}
+
+// bucketSort(data, Math.min(...data), Math.max(...data));
+
+///////////////////////////// SORT IN PLACE /////////////////////////////
+
+function shuffle(arr) {
+  let currIndex = arr.length;
+  let temporaryValue;
+  let randomIndex;
+
+  // while there are elements to shuffle
+  while(currIndex !== 0) {
+  // pick a remaining element
+    randomIndex = Math.floor(Math.random() * currIndex);
+    console.log('this is randomIndex:', randomIndex);
+    currIndex = currIndex - 1;
+    console.log('this is currIndex:', currIndex);
+
+    // swap random element with current element
+    temporaryValue = arr[currIndex];
+    console.log('this is temporaryValue:', temporaryValue);
+    arr[currIndex] = arr[randomIndex];
+    arr[randomIndex] = temporaryValue;
+  }
+
+  return arr;
+}
+
+let arr = [1, 2, 16, 44];
+arr = shuffle(arr);
+console.log('this is the shuffled arr:', arr);
