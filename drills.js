@@ -157,8 +157,6 @@ function mergeSortCounterTotal() {
 //   Push values to correct buckets 
 //   Sort bucket
 
-
-
 function bucketSort(arr, min, max) {
   if (arr.length === 1) {
     return arr;
@@ -175,8 +173,6 @@ function bucketSort(arr, min, max) {
 
   console.log('this is bucketArr', bucketArr);
 
-
-  
 }
 
 // bucketSort(data, Math.min(...data), Math.max(...data));
@@ -209,3 +205,11 @@ function shuffle(arr) {
 let arr = [1, 2, 16, 44];
 arr = shuffle(arr);
 console.log('this is the shuffled arr:', arr);
+
+
+///////////////////////////// SORTING BOOKS /////////////////////////////
+
+// If I were given 20 books to sort alphetically, I'd first sort them by using quick sort. 
+// This should sort the books alphebetically by their first letter.
+// I'd then have to check for duplicates, or where two books start with the same letter.
+// recursively sort again and repeat until all books are sorted
